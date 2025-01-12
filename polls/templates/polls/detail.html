@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duck selector</title>
+  </head>
+  <body>
+    <form method="POST" action="{% url 'polls:results' pk=question.id %}">
+      {% csrf_token %}
+
+      {% if form_duck %}
+        <h2>What is your favourite duck?</h2>
+        {{ form_duck.as_p }}
+      {% endif %}
+
+      {% if form_rating %}
+        <h2>How do you rate this duck?</h2>
+        {{ form_rating.as_p }}
+      {% endif %}
+
+      {% if from_input %}
+        <h2>Please describe a duck:</h2>
+        {{ from_input.as_p }}
+      {% endif %}
+
+      <input type="submit" value="Submit All">
+    </form>
+  </body>
+</html>

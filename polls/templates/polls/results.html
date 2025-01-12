@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Results page</title>
+  </head>
+  <body>
+    <h1>Result:</h1>
+    <p><strong>Your Favourite Duck:</strong> {{ duck_choice }}</p>
+    <p><strong>Your Duck Rating:</strong> {{ duck_rating }}</p>
+    <p><strong>Your Duck Description:</strong> {{ duck_description }}</p>
+    
+    <a href="{% url 'polls:detail' pk=question.id %}">Go back</a>
+  </body>
+</html>

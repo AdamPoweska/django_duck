@@ -1,0 +1,23 @@
+ul {
+    list-style-type: none;
+}
+
+ul li a {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #ccc;
+    list-style-type: none;
+    background-color: white;
+    width: 40%;
+}
+
+.center {
+    text-align: center;
+    width: 40%;
+  }
+
+body {
+    background: white url("images/background.png") no-repeat;
+}
